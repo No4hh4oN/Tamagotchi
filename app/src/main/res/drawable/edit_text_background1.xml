@@ -1,0 +1,9 @@
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="@android:color/transparent" />
+
+    <stroke
+        android:width="3dp"
+        android:color="#6066FF" /> <!-- 원하는 stroke 색상으로 변경 -->
+
+    <corners android:radius="20dp" /> <!-- 모서리를 둥글게 만들고 싶다면 추가 -->
+</shape>

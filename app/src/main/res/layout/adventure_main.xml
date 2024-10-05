@@ -1,0 +1,426 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient"
+    tools:context=".AdventureMain">
+
+    <EditText
+        android:id="@+id/healLevel"
+        android:layout_width="161dp"
+        android:layout_height="44dp"
+        android:ems="10"
+        android:focusableInTouchMode="false"
+        android:fontFamily="@font/chab"
+        android:gravity="start|top"
+        android:inputType="textMultiLine"
+        android:text="체력"
+        app:layout_constraintBottom_toTopOf="@+id/backGround"
+        app:layout_constraintEnd_toEndOf="@+id/damageLevel"
+        app:layout_constraintHorizontal_bias="0.84"
+        app:layout_constraintStart_toStartOf="@+id/damageLevel"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/pointLevel"
+        android:layout_width="161dp"
+        android:layout_height="44dp"
+        android:ems="10"
+        android:focusableInTouchMode="false"
+        android:fontFamily="@font/chab"
+        android:gravity="start|top"
+        android:inputType="textMultiLine"
+        android:text="점수"
+        app:layout_constraintBottom_toTopOf="@+id/backGround"
+        app:layout_constraintEnd_toEndOf="@+id/moveLevel"
+        app:layout_constraintHorizontal_bias="0.148"
+        app:layout_constraintStart_toStartOf="@+id/moveLevel"
+        tools:ignore="MissingConstraints" />
+
+    <view
+        android:id="@+id/backGround"
+        class="com.google.android.material.card.MaterialCardView"
+        android:layout_width="375dp"
+        android:layout_height="476dp"
+        android:background="@color/white"
+        app:cardCornerRadius="35sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.444"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.686"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/nowGround"
+        android:layout_width="161dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginBottom="4dp"
+        android:ems="10"
+        android:focusableInTouchMode="false"
+        android:fontFamily="@font/chab"
+        android:gravity="start|top"
+        android:inputType="textMultiLine"
+        android:text="현재 지형"
+        app:layout_constraintBottom_toTopOf="@+id/damageLevel"
+        app:layout_constraintStart_toEndOf="@+id/turnLevel"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/moveLevel"
+        android:layout_width="161dp"
+        android:layout_height="44dp"
+        android:layout_marginBottom="4dp"
+        android:ems="10"
+        android:focusableInTouchMode="false"
+        android:fontFamily="@font/chab"
+        android:gravity="start|top"
+        android:inputType="textMultiLine"
+        android:text="이동력"
+        app:layout_constraintBottom_toTopOf="@+id/pointLevel"
+        app:layout_constraintEnd_toEndOf="@+id/turnLevel"
+        app:layout_constraintHorizontal_bias="0.148"
+        app:layout_constraintStart_toStartOf="@+id/turnLevel"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/damageLevel"
+        android:layout_width="161dp"
+        android:layout_height="44dp"
+        android:layout_marginBottom="4dp"
+        android:ems="10"
+        android:focusableInTouchMode="false"
+        android:fontFamily="@font/chab"
+        android:gravity="start|top"
+        android:inputType="textMultiLine"
+        android:text="공격력"
+        app:layout_constraintBottom_toTopOf="@+id/healLevel"
+        app:layout_constraintEnd_toEndOf="@+id/nowGround"
+        app:layout_constraintHorizontal_bias="0.84"
+        app:layout_constraintStart_toStartOf="@+id/nowGround"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/textNowGrund"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:text="시작점"
+        app:layout_constraintBottom_toBottomOf="@+id/nowGround"
+        app:layout_constraintEnd_toEndOf="@+id/nowGround"
+        app:layout_constraintTop_toTopOf="@+id/nowGround"
+        app:layout_constraintVertical_bias="0.521"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/turnLevel"
+        android:layout_width="161dp"
+        android:layout_height="44dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="4dp"
+        android:ems="10"
+        android:focusableInTouchMode="false"
+        android:fontFamily="@font/chab"
+        android:gravity="start|top"
+        android:inputType="textMultiLine"
+        android:text="현재 턴 수"
+        app:layout_constraintBottom_toTopOf="@+id/moveLevel"
+        app:layout_constraintEnd_toEndOf="@+id/backGround"
+        app:layout_constraintHorizontal_bias="0.103"
+        app:layout_constraintStart_toStartOf="@+id/backGround"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/textMoveLevel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:text="0"
+        app:layout_constraintBottom_toBottomOf="@+id/moveLevel"
+        app:layout_constraintEnd_toEndOf="@+id/moveLevel"
+        app:layout_constraintTop_toTopOf="@+id/moveLevel"
+        app:layout_constraintVertical_bias="0.48"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/textPointLevel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:text="0"
+        app:layout_constraintBottom_toBottomOf="@+id/pointLevel"
+        app:layout_constraintEnd_toEndOf="@+id/pointLevel"
+        app:layout_constraintTop_toTopOf="@+id/pointLevel"
+        app:layout_constraintVertical_bias="0.48"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/textHealLevel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:text="10"
+        app:layout_constraintBottom_toBottomOf="@+id/healLevel"
+        app:layout_constraintEnd_toEndOf="@+id/healLevel"
+        app:layout_constraintTop_toTopOf="@+id/healLevel"
+        app:layout_constraintVertical_bias="0.48"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/textTurnLevel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:text="0"
+        app:layout_constraintBottom_toBottomOf="@+id/turnLevel"
+        app:layout_constraintEnd_toEndOf="@+id/turnLevel"
+        app:layout_constraintTop_toTopOf="@+id/turnLevel"
+        app:layout_constraintVertical_bias="0.56"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/textDamageLevel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:text="0"
+        app:layout_constraintBottom_toBottomOf="@+id/damageLevel"
+        app:layout_constraintEnd_toEndOf="@+id/damageLevel"
+        app:layout_constraintTop_toTopOf="@+id/damageLevel"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/buttonUp"
+        android:layout_width="95dp"
+        android:layout_height="49dp"
+        app:layout_constraintBottom_toBottomOf="@+id/backGround"
+        app:layout_constraintEnd_toEndOf="@+id/backGround"
+        app:layout_constraintHorizontal_bias="0.507"
+        app:layout_constraintStart_toStartOf="@+id/backGround"
+        app:layout_constraintTop_toTopOf="@+id/backGround"
+        app:layout_constraintVertical_bias="0.105"
+        app:srcCompat="@drawable/up"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/buttonLeft"
+        android:layout_width="49dp"
+        android:layout_height="95dp"
+        android:layout_marginStart="20dp"
+        app:layout_constraintBottom_toBottomOf="@+id/backGround"
+        app:layout_constraintStart_toStartOf="@+id/backGround"
+        app:layout_constraintTop_toTopOf="@+id/backGround"
+        app:srcCompat="@drawable/left"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/buttonRight"
+        android:layout_width="49dp"
+        android:layout_height="95dp"
+        android:layout_marginEnd="20dp"
+        app:layout_constraintBottom_toBottomOf="@+id/backGround"
+        app:layout_constraintEnd_toEndOf="@+id/backGround"
+        app:layout_constraintTop_toTopOf="@+id/backGround"
+        app:srcCompat="@drawable/right"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/buttonDown"
+        android:layout_width="95dp"
+        android:layout_height="49dp"
+        app:layout_constraintBottom_toBottomOf="@+id/backGround"
+        app:layout_constraintEnd_toEndOf="@+id/backGround"
+        app:layout_constraintHorizontal_bias="0.507"
+        app:layout_constraintStart_toStartOf="@+id/backGround"
+        app:layout_constraintTop_toTopOf="@+id/backGround"
+        app:layout_constraintVertical_bias="0.892"
+        app:srcCompat="@drawable/down"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/mainChar"
+        android:layout_width="208dp"
+        android:layout_height="205dp"
+        app:layout_constraintBottom_toBottomOf="@+id/backGround"
+        app:layout_constraintEnd_toEndOf="@+id/backGround"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="@+id/backGround"
+        app:layout_constraintTop_toTopOf="@+id/backGround"
+        app:layout_constraintVertical_bias="0.512"
+        app:srcCompat="@drawable/black_warrior"
+        tools:ignore="MissingConstraints" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/forestButton1"
+        android:layout_width="94dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="32dp"
+        android:background="#323232"
+        android:text="이동력 1 증가"
+        android:textColor="#ffffff"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/backGround"
+        app:layout_constraintStart_toStartOf="@+id/backGround"
+        app:layout_constraintTop_toTopOf="@+id/backGround"
+        app:layout_constraintVertical_bias="0.815" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/forestButton2"
+        android:layout_width="94dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginBottom="80dp"
+        android:background="#323232"
+        android:text="공격력 1 증가"
+        android:visibility="gone"
+        android:textColor="#ffffff"
+        app:layout_constraintBottom_toBottomOf="@+id/backGround"
+        app:layout_constraintStart_toEndOf="@+id/forestButton1" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/forestButton3"
+        android:layout_width="94dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginBottom="80dp"
+        android:background="#323232"
+        android:text="체력 1 증가"
+        android:visibility="gone"
+        android:textColor="#ffffff"
+        app:layout_constraintBottom_toBottomOf="@+id/backGround"
+        app:layout_constraintStart_toEndOf="@+id/forestButton2" />
+
+    <TextView
+        android:id="@+id/forestText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="124dp"
+        android:text="사원의 힘이 개방되었다. (세 개중 선택)"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/backGround"
+        app:layout_constraintEnd_toEndOf="@+id/backGround"
+        app:layout_constraintHorizontal_bias="0.513"
+        app:layout_constraintStart_toStartOf="@+id/backGround" />
+
+    <TextView
+        android:id="@+id/monsterText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="124dp"
+        android:text="길에 몬스터가 있다! (두 개중 선택)"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/backGround"
+        app:layout_constraintEnd_toEndOf="@+id/backGround"
+        app:layout_constraintHorizontal_bias="0.513"
+        app:layout_constraintStart_toStartOf="@+id/backGround" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/monsterButton1"
+        android:layout_width="94dp"
+        android:layout_height="36dp"
+        android:layout_marginBottom="80dp"
+        android:background="#323232"
+        android:text="체력 1 감소"
+        android:textColor="#ffffff"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/backGround"
+        app:layout_constraintEnd_toEndOf="@+id/backGround"
+        app:layout_constraintHorizontal_bias="0.313"
+        app:layout_constraintStart_toStartOf="@+id/backGround" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/monsterButton2"
+        android:layout_width="94dp"
+        android:layout_height="36dp"
+        android:layout_marginBottom="80dp"
+        android:background="#323232"
+        android:text="공격력 1 감소"
+        android:textColor="#ffffff"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/backGround"
+        app:layout_constraintEnd_toEndOf="@+id/backGround"
+        app:layout_constraintHorizontal_bias="0.701"
+        app:layout_constraintStart_toStartOf="@+id/backGround" />
+
+    <Button
+        android:id="@+id/gobacktoselectmenu"
+        android:layout_width="200dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="#000000"
+        android:fontFamily="@font/chab"
+        android:text="게임 선택 화면으로"
+        android:textSize="16sp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/m_tryagain"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/m_tryagain"
+        android:layout_width="200dp"
+        android:layout_height="75dp"
+        android:backgroundTint="#000000"
+        android:fontFamily="@font/chab"
+        android:text="다시하기"
+        android:textSize="20sp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.507"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.515"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/endingText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="클리어!\n점수 : 45"
+        android:textSize="20dp"
+        android:gravity="center"
+        android:fontFamily="@font/scdream6"
+        app:layout_constraintBottom_toBottomOf="@+id/backGround"
+        app:layout_constraintEnd_toEndOf="@+id/backGround"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintStart_toStartOf="@+id/backGround"
+        app:layout_constraintTop_toTopOf="@+id/backGround"
+        app:layout_constraintVertical_bias="0.221" />
+
+    <ImageView
+        android:id="@+id/mapButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/backGround"
+        app:layout_constraintEnd_toEndOf="@+id/backGround"
+        app:layout_constraintHorizontal_bias="0.969"
+        app:layout_constraintStart_toStartOf="@+id/backGround"
+        app:layout_constraintTop_toTopOf="@+id/backGround"
+        app:layout_constraintVertical_bias="0.03"
+        app:srcCompat="@drawable/mapbutton" />
+
+    <TextView
+        android:id="@+id/expText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/scdream6"
+        android:gravity="center"
+        android:text="asdf"
+        android:textSize="16dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.807" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

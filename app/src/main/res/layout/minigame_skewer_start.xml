@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient"
+    tools:context=".MakeSkewer">
+
+    <ImageView
+        android:id="@+id/black_skewer"
+        android:layout_width="209dp"
+        android:layout_height="193dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.34"
+        app:srcCompat="@drawable/black_skewer" />
+
+    <TextView
+        android:id="@+id/makeskewer_title1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="128dp"
+        android:fontFamily="@font/font_res"
+        android:text="꼬"
+        android:textColor="#8F5B0C"
+        android:textSize="60sp"
+        app:layout_constraintEnd_toStartOf="@+id/makeskewer_title2"
+        app:layout_constraintTop_toTopOf="@+id/black_skewer" />
+
+    <Button
+        android:id="@+id/skewer_game_start"
+        android:layout_width="225dp"
+        android:layout_height="115dp"
+        android:layout_marginTop="24dp"
+        android:fontFamily="@font/scdream6"
+        android:text="시작!"
+        android:textSize="60sp"
+        app:backgroundTint="#0091B7FE"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.486"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/makeskewer_title1" />
+
+    <TextView
+        android:id="@+id/makeskewer_title2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/font_res"
+        android:text="치"
+        android:textColor="#40FF6A"
+        android:textSize="60sp"
+        app:layout_constraintEnd_toStartOf="@+id/makeskewer_title3"
+        app:layout_constraintTop_toTopOf="@+id/makeskewer_title1" />
+
+    <TextView
+        android:id="@+id/makeskewer_title3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/font_res"
+        android:text="만"
+        android:textColor="#FF4A4A"
+        android:textSize="60sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/makeskewer_title2" />
+
+    <TextView
+        android:id="@+id/makeskewer_title4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/font_res"
+        android:text="들"
+        android:textColor="#FFF963"
+        android:textSize="60sp"
+        app:layout_constraintStart_toEndOf="@+id/makeskewer_title3"
+        app:layout_constraintTop_toTopOf="@+id/makeskewer_title3" />
+
+    <TextView
+        android:id="@+id/makeskewer_title5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/chab"
+        android:text="기!"
+        android:textColor="#FFFFFF"
+        android:textSize="60sp"
+        app:layout_constraintStart_toEndOf="@+id/makeskewer_title4"
+        app:layout_constraintTop_toTopOf="@+id/makeskewer_title4" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

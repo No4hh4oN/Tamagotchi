@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/MedicineImage"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient"
+    tools:context=".MainScreen"
+    >
+
+    <ImageView
+        android:id="@+id/characterImageView"
+        android:layout_width="238dp"
+        android:layout_height="199dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.276"
+        app:srcCompat="@drawable/character_level_1" />
+
+    <ImageView
+        android:id="@+id/settingview"
+        android:layout_width="41dp"
+        android:layout_height="41dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.956"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.023"
+        app:srcCompat="@drawable/union1" />
+
+    <View
+        android:id="@+id/pharmacyView"
+        android:layout_width="272dp"
+        android:layout_height="112dp"
+        android:layout_marginTop="25dp"
+        android:background="@drawable/rectangle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/characterImageView" />
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/scdream6"
+        android:text="null"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toBottomOf="@+id/pharmacyView"
+        app:layout_constraintEnd_toEndOf="@+id/pharmacyView"
+        app:layout_constraintStart_toStartOf="@+id/pharmacyView"
+        app:layout_constraintTop_toTopOf="@+id/pharmacyView"
+        app:layout_constraintVertical_bias="0.103" />
+
+    <TextView
+        android:id="@+id/levelText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="level"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/pharmacyView"
+        app:layout_constraintEnd_toEndOf="@+id/pharmacyView"
+        app:layout_constraintHorizontal_bias="0.372"
+        app:layout_constraintStart_toStartOf="@+id/pharmacyView"
+        app:layout_constraintTop_toTopOf="@+id/pharmacyView"
+        app:layout_constraintVertical_bias="0.611" />
+
+
+    <TextView
+        android:id="@+id/levelNum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:elevation="15dp"
+        android:text="0"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/pharmacyView"
+        app:layout_constraintEnd_toEndOf="@+id/pharmacyView"
+        app:layout_constraintHorizontal_bias="0.593"
+        app:layout_constraintStart_toStartOf="@+id/pharmacyView"
+        app:layout_constraintTop_toTopOf="@+id/pharmacyView"
+        app:layout_constraintVertical_bias="0.611" />
+
+    <android.widget.Button
+        android:id="@+id/statebutton"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="5dp"
+        android:background="@drawable/union5"
+        android:text="돋보기"
+        android:textColor="#00FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.12"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.461" />
+
+    <android.widget.Button
+        android:id="@+id/feedbutton"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:background="@drawable/circle"
+        android:contentDescription="먹이"
+        app:layout_constraintBottom_toBottomOf="@+id/gamebutton"
+        app:layout_constraintEnd_toEndOf="@+id/pharmacyView"
+        app:layout_constraintHorizontal_bias="0.255"
+        app:layout_constraintStart_toStartOf="@+id/pharmacyView"
+        app:layout_constraintTop_toTopOf="@+id/gamebutton"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageView
+        android:id="@+id/feedImage"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:elevation="15dp"
+        app:layout_constraintBottom_toBottomOf="@+id/feedbutton"
+        app:layout_constraintEnd_toEndOf="@+id/feedbutton"
+        app:layout_constraintStart_toStartOf="@+id/feedbutton"
+        app:layout_constraintTop_toTopOf="@+id/feedbutton"
+        app:srcCompat="@drawable/union2" />
+
+    <android.widget.Button
+        android:id="@+id/gamebutton"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/circle"
+        android:contentDescription="게임"
+        app:layout_constraintEnd_toStartOf="@+id/feedbutton"
+        app:layout_constraintTop_toBottomOf="@+id/pharmacyView" />
+
+    <ImageView
+        android:id="@+id/gameImage"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:elevation="15dp"
+        app:layout_constraintBottom_toBottomOf="@+id/gamebutton"
+        app:layout_constraintEnd_toEndOf="@+id/gamebutton"
+        app:layout_constraintStart_toStartOf="@+id/gamebutton"
+        app:layout_constraintTop_toTopOf="@+id/gamebutton"
+        app:srcCompat="@drawable/union3" />
+
+
+    <ImageView
+        android:id="@+id/medicineImage"
+        android:layout_width="55dp"
+        android:layout_height="55sp"
+        android:elevation="15dp"
+        app:layout_constraintBottom_toBottomOf="@+id/medicinebutton"
+        app:layout_constraintEnd_toEndOf="@+id/medicinebutton"
+        app:layout_constraintHorizontal_bias="0.555"
+        app:layout_constraintStart_toStartOf="@+id/medicinebutton"
+        app:layout_constraintTop_toTopOf="@+id/medicinebutton"
+        app:layout_constraintVertical_bias="0.511"
+        app:srcCompat="@drawable/union6" />
+
+
+    <android.widget.Button
+        android:id="@+id/medicinebutton"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:background="@drawable/circle"
+        android:contentDescription="약"
+        app:layout_constraintBottom_toBottomOf="@+id/gamebutton"
+        app:layout_constraintEnd_toEndOf="@+id/pharmacyView"
+        app:layout_constraintHorizontal_bias="0.75"
+        app:layout_constraintStart_toStartOf="@+id/pharmacyView"
+        app:layout_constraintTop_toTopOf="@+id/gamebutton"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <android.widget.Button
+        android:id="@+id/toybutton"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="16dp"
+        android:background="@drawable/circle"
+        android:contentDescription="기분"
+        app:layout_constraintBottom_toBottomOf="@+id/gamebutton"
+        app:layout_constraintStart_toEndOf="@+id/medicinebutton"
+        app:layout_constraintTop_toTopOf="@+id/gamebutton"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageView
+        android:id="@+id/toyImage"
+        android:layout_width="55dp"
+        android:layout_height="55sp"
+        android:elevation="15dp"
+        app:layout_constraintBottom_toBottomOf="@+id/toybutton"
+        app:layout_constraintEnd_toEndOf="@+id/toybutton"
+        app:layout_constraintStart_toStartOf="@+id/toybutton"
+        app:layout_constraintTop_toTopOf="@+id/toybutton"
+        app:srcCompat="@drawable/union7" />
+
+    <ProgressBar
+        android:id="@+id/experience"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="214dp"
+        android:layout_height="20dp"
+        android:max="100"
+        android:progress="75"
+        app:layout_constraintBottom_toBottomOf="@+id/pharmacyView"
+        app:layout_constraintEnd_toEndOf="@+id/pharmacyView"
+        app:layout_constraintHorizontal_bias="0.482"
+        app:layout_constraintStart_toStartOf="@+id/pharmacyView"
+        app:layout_constraintTop_toTopOf="@+id/pharmacyView"
+        app:layout_constraintVertical_bias="0.858" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

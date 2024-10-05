@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/MedicineImage"
+    android:background="@drawable/gradient"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LookCharacter">
+
+    <ImageView
+        android:id="@+id/characterImageView"
+        android:layout_width="238dp"
+        android:layout_height="199dp"
+        android:elevation="15dp"
+        app:layout_constraintBottom_toBottomOf="@+id/charImageView"
+        app:layout_constraintEnd_toEndOf="@+id/charImageView"
+        app:layout_constraintStart_toStartOf="@+id/charImageView"
+        app:layout_constraintTop_toTopOf="@+id/charImageView"
+        app:layout_constraintVertical_bias="0.45999998"
+        app:srcCompat="@drawable/character_level_1" />
+
+    <View
+        android:id="@+id/charImageView"
+        android:layout_width="280dp"
+        android:layout_height="263dp"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="110dp"
+        android:background="@drawable/rectangle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/nameView"
+        android:layout_width="269dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/rectangle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/charImageView" />
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/scdream6"
+        android:text="null"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toBottomOf="@+id/nameView"
+        app:layout_constraintEnd_toEndOf="@+id/nameView"
+        app:layout_constraintStart_toStartOf="@+id/nameView"
+        app:layout_constraintTop_toTopOf="@+id/nameView"
+        app:layout_constraintVertical_bias="0.103" />
+
+    <TextView
+        android:id="@+id/levelText2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/scdream6"
+        android:text="level"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/nameView"
+        app:layout_constraintEnd_toEndOf="@+id/nameView"
+        app:layout_constraintHorizontal_bias="0.385"
+        app:layout_constraintStart_toStartOf="@+id/nameView"
+        app:layout_constraintTop_toTopOf="@+id/nameView"
+        app:layout_constraintVertical_bias="0.753" />
+
+    <TextView
+        android:id="@+id/levelNum2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/nameView"
+        app:layout_constraintEnd_toEndOf="@+id/nameView"
+        app:layout_constraintHorizontal_bias="0.6"
+        app:layout_constraintStart_toStartOf="@+id/nameView"
+        app:layout_constraintTop_toTopOf="@+id/nameView"
+        app:layout_constraintVertical_bias="0.753" />
+
+    <View
+        android:id="@+id/userClickView"
+        android:layout_width="344dp"
+        android:layout_height="156dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/rectangle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.51"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nameView" />
+
+    <TextView
+        android:id="@+id/emotionText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/scdream6"
+        android:text="기분"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/userClickView"
+        app:layout_constraintEnd_toEndOf="@+id/userClickView"
+        app:layout_constraintHorizontal_bias="0.123"
+        app:layout_constraintStart_toStartOf="@+id/userClickView"
+        app:layout_constraintTop_toTopOf="@+id/userClickView"
+        app:layout_constraintVertical_bias="0.18" />
+
+    <ImageView
+        android:id="@+id/healthStatus"
+        android:layout_width="124dp"
+        android:layout_height="26dp"
+        android:src="@drawable/heart3"
+        app:layout_constraintBottom_toBottomOf="@+id/userClickView"
+        app:layout_constraintEnd_toEndOf="@+id/userClickView"
+        app:layout_constraintHorizontal_bias="0.622"
+        app:layout_constraintStart_toStartOf="@+id/userClickView"
+        app:layout_constraintTop_toTopOf="@+id/userClickView"
+        app:layout_constraintVertical_bias="0.507" />
+
+    <TextView
+        android:id="@+id/healthText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/scdream6"
+        android:text="건강"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/userClickView"
+        app:layout_constraintEnd_toEndOf="@+id/userClickView"
+        app:layout_constraintHorizontal_bias="0.121"
+        app:layout_constraintStart_toStartOf="@+id/userClickView"
+        app:layout_constraintTop_toTopOf="@+id/userClickView" />
+
+    <ImageView
+        android:id="@+id/emotionStatus"
+        android:layout_width="124dp"
+        android:layout_height="26dp"
+        android:src="@drawable/health3"
+        app:layout_constraintBottom_toBottomOf="@+id/userClickView"
+        app:layout_constraintEnd_toEndOf="@+id/userClickView"
+        app:layout_constraintHorizontal_bias="0.622"
+        app:layout_constraintStart_toStartOf="@+id/userClickView"
+        app:layout_constraintTop_toTopOf="@+id/userClickView"
+        app:layout_constraintVertical_bias="0.18" />
+
+    <TextView
+        android:id="@+id/hungerText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/scdream6"
+        android:text="포만감"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/userClickView"
+        app:layout_constraintEnd_toEndOf="@+id/userClickView"
+        app:layout_constraintHorizontal_bias="0.11"
+        app:layout_constraintStart_toStartOf="@+id/userClickView"
+        app:layout_constraintTop_toTopOf="@+id/userClickView"
+        app:layout_constraintVertical_bias="0.8" />
+
+    <ImageView
+        android:id="@+id/hungerStatus"
+        android:layout_width="124dp"
+        android:layout_height="26dp"
+        android:src="@drawable/hungry0"
+        app:layout_constraintBottom_toBottomOf="@+id/userClickView"
+        app:layout_constraintEnd_toEndOf="@+id/userClickView"
+        app:layout_constraintHorizontal_bias="0.622"
+        app:layout_constraintStart_toStartOf="@+id/userClickView"
+        app:layout_constraintTop_toTopOf="@+id/userClickView"
+        app:layout_constraintVertical_bias="0.815" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/MedicineImage"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient"
+    tools:context=".MakeSkewer">
+
+    <view
+        android:id="@+id/userClickView"
+        class="androidx.cardview.widget.CardView"
+        android:layout_width="373dp"
+        android:layout_height="452dp"
+        android:layout_marginTop="10dp"
+        app:cardBackgroundColor="#F2F2F2"
+        app:cardCornerRadius="35sp"
+        app:cardElevation="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/feverTime2" />
+
+    <ImageView
+        android:id="@+id/skewerstick"
+        android:layout_width="364dp"
+        android:layout_height="73dp"
+        app:layout_constraintBottom_toBottomOf="@+id/ranColor1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.489"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/skewernone" />
+
+    <TextView
+        android:id="@+id/ranColor1"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="6dp"
+        android:background="@drawable/button_background"
+        android:text="TextView"
+        android:textColor="#00FFFFFF"
+        app:layout_constraintEnd_toStartOf="@+id/ranColor2"
+        app:layout_constraintStart_toStartOf="@+id/skewerstick"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextMultiLine4" />
+
+    <TextView
+        android:id="@+id/ranColor2"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginEnd="6dp"
+        android:background="@drawable/button_background"
+        android:text="TextView"
+        android:textColor="#00FFFFFF"
+        app:layout_constraintEnd_toStartOf="@+id/ranColor3"
+        app:layout_constraintTop_toTopOf="@+id/ranColor1" />
+
+    <TextView
+        android:id="@+id/ranColor4"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginEnd="104dp"
+        android:background="@drawable/button_background"
+        android:text="TextView"
+        android:textColor="#00FFFFFF"
+        app:layout_constraintEnd_toEndOf="@+id/skewerstick"
+        app:layout_constraintTop_toTopOf="@+id/ranColor3" />
+
+    <TextView
+        android:id="@+id/ranColor3"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginEnd="6dp"
+        android:background="@drawable/button_background"
+        android:text="TextView"
+        android:textColor="#00FFFFFF"
+        app:layout_constraintEnd_toStartOf="@+id/ranColor4"
+        app:layout_constraintTop_toTopOf="@+id/ranColor2" />
+
+    <Button
+        android:id="@+id/meatButton"
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="100dp"
+        android:background="@drawable/button_background"
+        android:text="Button"
+        android:textColor="#00FFFFFF"
+        app:backgroundTint="#8F5B0C"
+        app:layout_constraintStart_toStartOf="@+id/userClickView"
+        app:layout_constraintTop_toTopOf="@+id/userClickView" />
+
+    <Button
+        android:id="@+id/tomatoButton"
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/button_background"
+        android:text="Button"
+        android:textColor="#00FFFFFF"
+        app:backgroundTint="#FF4A4A"
+        app:layout_constraintStart_toStartOf="@+id/userClickView"
+        app:layout_constraintTop_toBottomOf="@+id/meatButton" />
+
+    <Button
+        android:id="@+id/cornButton"
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/button_background"
+        android:text="Button"
+        android:textColor="#00FFFFFF"
+        app:backgroundTint="#FFF963"
+        app:layout_constraintEnd_toEndOf="@+id/userClickView"
+        app:layout_constraintTop_toTopOf="@+id/tomatoButton" />
+
+    <Button
+        android:id="@+id/onionButton"
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/button_background"
+        android:text="Button"
+        android:textColor="#00FFFFFF"
+        app:backgroundTint="#40FF6A"
+        app:layout_constraintEnd_toEndOf="@+id/userClickView"
+        app:layout_constraintTop_toTopOf="@+id/meatButton" />
+
+
+    <EditText
+        android:id="@+id/editTextTextMultiLine4"
+        android:layout_width="375dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="4dp"
+        android:ems="10"
+        android:fontFamily="@font/scdream6"
+        android:gravity="start|top"
+        android:inputType="textMultiLine"
+        android:focusableInTouchMode="false"
+        android:text="꼬치 수"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextMultiLine3" />
+
+    <EditText
+        android:id="@+id/editTextNumber3"
+        android:layout_width="70dp"
+        android:layout_height="50dp"
+        android:ems="10"
+        android:fontFamily="@font/scdream6"
+        android:inputType="number"
+        android:text="0"
+        android:textAlignment="textEnd"
+        app:layout_constraintBottom_toBottomOf="@+id/editTextTextMultiLine4"
+        app:layout_constraintEnd_toEndOf="@+id/editTextTextMultiLine4"
+        app:layout_constraintTop_toTopOf="@+id/editTextTextMultiLine4"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/timer_text2"
+        android:layout_width="68dp"
+        android:layout_height="50dp"
+        android:text="01:00"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/editTextTextMultiLine3"
+        app:layout_constraintEnd_toEndOf="@+id/editTextTextMultiLine3"
+        app:layout_constraintTop_toTopOf="@+id/editTextTextMultiLine3"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <EditText
+        android:id="@+id/editTextTextMultiLine3"
+        android:layout_width="375dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="2dp"
+        android:ems="10"
+        android:fontFamily="@font/scdream6"
+        android:gravity="start|top"
+        android:inputType="textMultiLine"
+        android:focusableInTouchMode="false"
+        android:text="제한시간"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/s_score" />
+
+    <TextView
+        android:id="@+id/userColor1"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="28dp"
+        android:background="@drawable/button_background"
+        android:text="TextView"
+        android:textColor="#00FFFFFF"
+        app:layout_constraintStart_toStartOf="@+id/userClickView"
+        app:layout_constraintTop_toTopOf="@+id/userClickView" />
+
+    <TextView
+        android:id="@+id/userColor2"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="24dp"
+        android:background="@drawable/button_background"
+        android:text="TextView"
+        android:textColor="#00FFFFFF"
+        app:layout_constraintStart_toEndOf="@+id/userColor1"
+        app:layout_constraintTop_toTopOf="@+id/userColor1" />
+
+    <TextView
+        android:id="@+id/userColor3"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="24dp"
+        android:background="@drawable/button_background"
+        android:text="TextView"
+        android:textColor="#00FFFFFF"
+        app:layout_constraintStart_toEndOf="@+id/userColor2"
+        app:layout_constraintTop_toTopOf="@+id/userColor2" />
+
+    <TextView
+        android:id="@+id/userColor4"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="24dp"
+        android:background="@drawable/button_background"
+        android:text="TextView"
+        android:textColor="#00FFFFFF"
+        app:layout_constraintStart_toEndOf="@+id/userColor3"
+        app:layout_constraintTop_toTopOf="@+id/userColor3" />
+
+
+
+    <Button
+        android:id="@+id/gobacktoselectmenu"
+        android:layout_width="200dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="#000000"
+        android:fontFamily="@font/chab"
+        android:text="게임 선택 화면으로"
+        android:textSize="16sp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/s_tryagain"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/s_tryagain"
+        android:layout_width="200dp"
+        android:layout_height="75dp"
+        android:backgroundTint="#000000"
+        android:fontFamily="@font/chab"
+        android:text="다시하기"
+        android:textSize="20sp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.446"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/s_score"
+        android:layout_width="375dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="50dp"
+        android:fontFamily="@font/scdream6"
+        android:text="0"
+        android:textSize="34sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/feverTime2"
+        android:layout_width="300dp"
+        android:layout_height="75dp"
+        android:fontFamily="@font/chab"
+        android:text="피버타임!!"
+        android:textAlignment="center"
+        android:textColor="#EC4E84"
+        android:textSize="60sp"
+        app:layout_constraintEnd_toEndOf="@+id/userClickView"
+        app:layout_constraintStart_toStartOf="@+id/userClickView"
+        app:layout_constraintTop_toBottomOf="@+id/ranColor1" />
+
+    <TextView
+        android:id="@+id/expText3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/scdream6"
+        android:gravity="center"
+        android:text="asdf"
+        android:textSize="16dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.807" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

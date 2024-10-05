@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/MedicineImage"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient"
+    tools:context=".CatchMouse">
+
+    <view
+        android:id="@+id/mouseGameView"
+        class="com.google.android.material.card.MaterialCardView"
+        android:layout_width="375dp"
+        android:layout_height="476dp"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="#ED714939"
+        app:cardCornerRadius="35sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.555"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/FeverTime" />
+
+    <ImageView
+        android:id="@+id/secondmouse"
+        android:layout_width="83dp"
+        android:layout_height="81dp"
+        android:layout_marginTop="30dp"
+        app:layout_constraintEnd_toEndOf="@+id/mouseGameView"
+        app:layout_constraintStart_toStartOf="@+id/mouseGameView"
+        app:layout_constraintTop_toBottomOf="@+id/CatchCatch"
+        app:srcCompat="@drawable/mouseimagegame" />
+
+    <ImageView
+        android:id="@+id/firstmouse"
+        android:layout_width="84dp"
+        android:layout_height="80dp"
+        android:layout_marginEnd="30dp"
+        app:layout_constraintEnd_toStartOf="@+id/secondmouse"
+        app:layout_constraintTop_toTopOf="@+id/secondmouse"
+        app:srcCompat="@drawable/mouseimagegame" />
+
+    <ImageView
+        android:id="@+id/thirdmouse"
+        android:layout_width="86dp"
+        android:layout_height="85dp"
+        android:layout_marginStart="30dp"
+        app:layout_constraintStart_toEndOf="@+id/secondmouse"
+        app:layout_constraintTop_toTopOf="@+id/secondmouse"
+        app:srcCompat="@drawable/mouseimagegame" />
+
+    <TextView
+        android:id="@+id/CatchCatch"
+        android:layout_width="340dp"
+        android:layout_height="90dp"
+        android:fontFamily="@font/chab"
+        android:text="잡았다 요놈!"
+        android:textAlignment="center"
+        android:textColor="#F6D252"
+        android:textSize="48sp"
+        app:layout_constraintBottom_toBottomOf="@+id/mouseGameView"
+        app:layout_constraintEnd_toEndOf="@+id/mouseGameView"
+        app:layout_constraintHorizontal_bias="0.485"
+        app:layout_constraintStart_toStartOf="@+id/mouseGameView"
+        app:layout_constraintTop_toTopOf="@+id/mouseGameView"
+        app:layout_constraintVertical_bias="0.098" />
+
+    <TextView
+        android:id="@+id/m_score"
+        android:layout_width="375dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="60dp"
+        android:fontFamily="@font/scdream6"
+        android:inputType="number"
+        android:text="0"
+        android:textSize="34sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editTextTextMultiLine2"
+        android:layout_width="375dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="4dp"
+        android:ems="10"
+        android:fontFamily="@font/scdream6"
+        android:gravity="start|top"
+        android:inputType="textMultiLine"
+        android:text="잡은 마리 수"
+        android:focusableInTouchMode="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.444"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextMultiLine1" />
+
+    <TextView
+        android:id="@+id/timer_text"
+        android:layout_width="68dp"
+        android:layout_height="50dp"
+        android:text="01:00"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/editTextTextMultiLine2"
+        app:layout_constraintEnd_toEndOf="@+id/editTextTextMultiLine1"
+        app:layout_constraintTop_toTopOf="@+id/editTextTextMultiLine1"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <EditText
+        android:id="@+id/editTextTextMultiLine1"
+        android:layout_width="375dp"
+        android:layout_height="50dp"
+        android:ems="10"
+        android:fontFamily="@font/scdream6"
+        android:gravity="start|top"
+        android:inputType="textMultiLine"
+        android:text="제한시간"
+        android:focusableInTouchMode="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.444"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/m_score" />
+
+    <TextView
+        android:id="@+id/FeverTime"
+        android:layout_width="300dp"
+        android:layout_height="75dp"
+        android:fontFamily="@font/chab"
+        android:text="피버타임!!"
+        android:textColor="#EC4E84"
+        android:textSize="60sp"
+        app:layout_constraintEnd_toEndOf="@+id/mouseGameView"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="@+id/mouseGameView"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextMultiLine2"
+        tools:textAlignment="center" />
+
+    <Button
+        android:id="@+id/gobacktoselectmenu"
+        android:layout_width="200dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="#000000"
+        android:fontFamily="@font/chab"
+        android:text="게임 선택 화면으로"
+        android:textSize="16sp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/m_tryagain" />
+
+    <Button
+        android:id="@+id/m_tryagain"
+        android:layout_width="200dp"
+        android:layout_height="75dp"
+        android:backgroundTint="#000000"
+        android:fontFamily="@font/chab"
+        android:text="다시하기"
+        android:textSize="20sp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.446" />
+
+    <TextView
+        android:id="@+id/expText2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/scdream6"
+        android:gravity="center"
+        android:text="asdf"
+        android:textColor="@color/white"
+        android:textSize="16dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.785" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/MedicineImage"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient"
+    tools:context=".MinigameSelect">
+
+
+    <TextView
+        android:id="@+id/selectmenu_title"
+        android:layout_width="265dp"
+        android:layout_height="120dp"
+        android:fontFamily="@font/chab"
+        android:gravity="top|center_horizontal"
+        android:text="게임 선택"
+        android:textAlignment="center"
+        android:textSize="60sp"
+        android:textStyle="normal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.135" />
+
+    <Button
+        android:id="@+id/adventure_menu"
+        android:layout_width="160sp"
+        android:layout_height="160sp"
+        android:layout_centerInParent="true"
+        android:backgroundTint="#F2F2F2"
+        android:drawableBottom="@drawable/icon_dragon"
+        android:gravity="center"
+        android:padding="35sp"
+        android:text="."
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.38"
+        tools:ignore="DuplicateIds" />
+
+    <TextView
+        android:id="@+id/advmenu_text"
+        android:layout_width="160dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="4dp"
+        android:gravity="top|center_horizontal"
+        android:text="숲 속 탐험"
+        android:textAlignment="center"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/adventure_menu"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/catchmouse_menu"
+        android:layout_width="160sp"
+        android:layout_height="160sp"
+        android:backgroundTint="#F2F2F2"
+        android:drawableBottom="@drawable/icon_mouse"
+        android:gravity="center"
+        android:padding="20sp"
+        android:text="."
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.119"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.756"
+        tools:ignore="DuplicateIds" />
+
+    <TextView
+        android:id="@+id/mousemenu_Text"
+        android:layout_width="160dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="4dp"
+        android:gravity="top|center_horizontal"
+        android:text="쥐 잡기"
+        android:textAlignment="center"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/catchmouse_menu"
+        app:layout_constraintStart_toStartOf="@+id/catchmouse_menu"
+        app:layout_constraintTop_toBottomOf="@+id/catchmouse_menu"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/makeskewer_menu"
+        android:layout_width="160sp"
+        android:layout_height="160sp"
+        android:backgroundTint="#F2F2F2"
+        android:drawableBottom="@drawable/icon_skewer"
+        android:gravity="center"
+        android:padding="25sp"
+        android:text="."
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.88"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.756"
+        tools:ignore="DuplicateIds" />
+
+    <TextView
+        android:id="@+id/skewer_menu_Text"
+        android:layout_width="160dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="30dp"
+        android:gravity="top|center_horizontal"
+        android:text="꼬치 만들기"
+        android:textAlignment="center"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/makeskewer_menu"
+        app:layout_constraintHorizontal_bias="0.012"
+        app:layout_constraintStart_toStartOf="@+id/makeskewer_menu"
+        app:layout_constraintTop_toBottomOf="@+id/makeskewer_menu"
+        tools:ignore="MissingConstraints" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
